@@ -60,7 +60,6 @@ Plan_v2.md
 *.tiff
 architecture_diagram.md
 architecture_diagram_detailed.md
-architecture_diagram_high_level.md
 convert_to_tiff.py
 # Temporary files
 *.tmp
