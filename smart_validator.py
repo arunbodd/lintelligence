@@ -904,7 +904,7 @@ IMPORTANT:
 <body>
     <div class="container">
         <div class="header">
-            <h1>🔬 Nextflow Pipeline Validation Report</h1>
+            <h1>Nextflow Pipeline Validation Report</h1>
             <p><strong>Pipeline:</strong> {report.pipeline_path}</p>
             <p><strong>Generated:</strong> {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</p>
             <div class="score">Score: {report.total_score:.1f}% (Grade: {report.grade})</div>
@@ -930,7 +930,7 @@ IMPORTANT:
         </div>
         
         <div class="charts-section">
-            <h2>📊 Rule Set Compliance Overview</h2>
+            <h2> Rule Set Compliance Overview</h2>
             <div class="chart-container">
                 <div class="chart-item">
                     <div class="chart-title">Overall Status Distribution</div>
@@ -943,10 +943,10 @@ IMPORTANT:
             </div>
         </div>
         
-        {f'<div class="ai-summary"><h3>🤖 AI Summary</h3><p>{getattr(report, "ai_summary", "")}</p></div>' if getattr(report, 'ai_summary', '') else ''}
+        {f'<div class="ai-summary"><h3> AI Summary</h3><p>{getattr(report, "ai_summary", "")}</p></div>' if getattr(report, 'ai_summary', '') else ''}
         
         <div class="results">
-            <h2>📋 Detailed Results</h2>
+            <h2>Detailed Results</h2>
             <table class="results-table">
                 <thead>
                     <tr>
@@ -995,7 +995,7 @@ IMPORTANT:
         chart_js_code = f"""
 <script>
 // Chart.js configuration
-Chart.defaults.font.family = 'Arial, sans-serif';
+Chart.defaults.font.family = 'Roboto, sans-serif';
 
 // Overall status distribution pie chart
 const overallCtx = document.getElementById('overallChart').getContext('2d');
@@ -1138,20 +1138,20 @@ const ruleSetChart = new Chart(ruleSetCtx, {{
         warnings = len([r for r in report.results if r.status == 'warning'])
         
         output = f"""
-🔬 NEXTFLOW PIPELINE VALIDATION REPORT
+NEXTFLOW PIPELINE VALIDATION REPORT
 {'=' * 50}
 
-Pipeline: {report.pipeline_path}
-Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
+Pipeline: {Path(report.pipeline_path).name}
+Generated: {datetime.now().strftime('%Y-%m-%d')}
 Pipeline Type: {getattr(report, 'pipeline_type', 'unknown')}
 
-📊 OVERALL SCORE
+OVERALL SCORE
 {'-' * 20}
 Score: {report.total_score:.1f}%
 Grade: {report.grade}
 Critical Failures: {report.critical_failures}
 
-📈 SUMMARY
+SUMMARY
 {'-' * 20}
 Total Rules: {len(report.results)}
 ✅ Passed: {passed}
@@ -1162,14 +1162,14 @@ Total Rules: {len(report.results)}
         if getattr(report, 'ai_summary', ''):
             output += f"""
 
-🤖 AI SUMMARY
+AI SUMMARY
 {'-' * 20}
 {report.ai_summary}
 """
         
         output += f"""
 
-📋 DETAILED RESULTS
+DETAILED RESULTS
 {'-' * 20}
 """
         
