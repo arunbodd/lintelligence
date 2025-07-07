@@ -79,11 +79,7 @@ setup(
     python_requires=">=3.9",
     install_requires=requirements,
     extras_require=extras_require,
-    entry_points={
-        "console_scripts": [
-            "lintelligence=smart_validator:main",
-        ],
-    },
+    scripts=['bin/lintelligence'],
     classifiers=[
         "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",

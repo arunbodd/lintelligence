@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Get the directory where this script is located
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+# Get the project root directory (parent of bin)
+PROJECT_ROOT="$( dirname "$SCRIPT_DIR" )"
+
+# Run the smart_validator.py script with all arguments passed to this script
+python "$PROJECT_ROOT/smart_validator.py" "$@"
