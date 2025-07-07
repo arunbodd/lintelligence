@@ -1,0 +1,69 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+.env
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Nextflow Pipeline Analyzer specific
+.nextflow_cache/
+Results/
+archive/
+*.log
+*.html
+*.json
+!requirements.txt
+!pyproject.toml
+
+# Exclude rule files (users should add their own)
+rules/
+!rules/custom_rule_example.yml
+!rules/*.json
+Plan_v2.md
+
+# API keys and sensitive information
+.env
+*.key
+*_key
+*_secret
+*_token
+
+# Generated images (except the main architecture diagrams)
+*.png
+*.tiff
+architecture_diagram.md
+architecture_diagram_detailed.md
+architecture_diagram_high_level.md
+convert_to_tiff.py
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~
