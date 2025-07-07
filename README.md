@@ -54,7 +54,7 @@ An intelligent, AI-powered validation tool for Nextflow pipelines that ensures c
 
 ### High-Level Architecture Diagram
 
-![Smart Nextflow Pipeline Validator Architecture](./nextflow_pipeline_analyzer_high_level.png)
+![Smart Nextflow Pipeline Validator Architecture](./lintelligence_high_level.png)
 
 *High-level architecture diagram showing the key components and data flow of the Nextflow Pipeline Analyzer system.*
 

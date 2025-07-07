@@ -61,6 +61,7 @@ Plan_v2.md
 architecture_diagram.md
 architecture_diagram_detailed.md
 convert_to_tiff.py
+!lintelligence_high_level.png
 # Temporary files
 *.tmp
 *.bak
